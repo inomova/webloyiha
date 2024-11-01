@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;  
+            box-sizing: border-box; 
+            text-decoration: none;
+            list-style-type: none;  
+            font-family: sans-serif;       
+        }
+        header {
+            background-color: rgba(3, 3, 97, 0.877);
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            justify-content: space-between;
+            box-shadow: 0 5px 10px rgb(2, 2, 114);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        header a{
+            color: #fff;
+        }
+        header nav ul li{
+            float: left;
+        }
+        header nav ul li:hover{
+            background-color: rgb(3, 3, 90);
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+        header>a{
+            font-size: 30px;
+            transition: 0.5s ease;
+        }
+        header>a:hover{
+            font-size: 38px;
+           
+        }
+        header nav ul li a{
+            display: block;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+        main{
+            margin-top: 100px;
+        }
+        footer{
+            background-color: rgb(1, 1, 61);
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            justify-content: space-between;
+            box-shadow: 0 5px 10px  black;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        footer a,i{
+            color: #fff;
+        }
+        footer nav ul li a{
+            display: block;
+            padding: 10px;
+        }
+        .social i{
+            font-size: 24px;
+            padding: 5px;
+        }
+        .social i:first-child:hover{
+            color: red;
+         }
+         .social i:last-child:hover{
+            color: blue;
+         }
+         .social i:nth-child(2):hover{
+            color: blue;
+         }
+         .social i:nth-child(3):hover{
+            color: purple;
+         }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">KITOBLAR</a>
+        <nav>
+            <ul>
+                <li><a href="loyiha.html">UMUMIY BO'LIM</a></li>
+                <li><a href="kutibxona.html">KUTUBXONA</a></li>
+                <li><a href="tatuff.html">TATUFF</a></li>
+                <li><a href="yangiliklar.html">YANGILIKLAR</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        
+        <h2 id="nom">UMUMIY BO'LIM</h2>
+    </main>
+    <footer>
+        <a href="#">KITOBLAR</a>
+        <nav>
+            <ul>
+                <li><a href="loyiha.html">UMUMIY BO'LIM</a></li>
+                <li><a href="kutibxona.html">KUTUBXONA</a></li>
+                <li><a href="tatuff.html">TATUFF</a></li>
+                <li><a href="yangiliklar.html">YANGILIKLAR</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+    </footer>
+
+    <script>
+        let x=5;
+        console.log(x); 
+        let nom = document.getElementById("nom");
+        function vaqt(){
+            let sana = new Date();
+       let soat = sana.getHours();
+       let daqiqa = sana.getMinutes();
+        let soniya = sana.getSeconds();
+        if(soat<10) soat = "0" + soat;
+        if(daqiqa<10) daqiqa = "0" + daqiqa;
+        if(soniya<10) soniya = "0" + soniya;
+        
+
+        
+
+        if(soniya%2==0) {nom.style.color = "red";}
+        if(soniya%2!=0) {nom.style.color = "blue";}
+
+        nom.innerHTML = soat + ":" + daqiqa + ":" + soniya;   
+        }
+        setInterval(vaqt, 1000);
+        
+           
+    </script>
+</body>
+</html>
